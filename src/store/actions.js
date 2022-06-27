@@ -5,7 +5,7 @@ import {
   fetchUser,
   fetchItem,
   fetchList,
-} from "../api/index.js";
+} from "../api/index";
 
 export default {
   FETCH_NEWS({ commit }) {
@@ -25,7 +25,6 @@ export default {
   },
   // hoc
   FETCH_LIST({ commit }, listType) {
-    console.info(commit, listType, " this is tghat");
     return fetchList(listType).then((res) => commit("SET_LIST", res.data));
   },
 };
